@@ -1,5 +1,3 @@
-import os
-
 template pkg(name: string; hasDeps = false; cmd = "nimble test"; url = ""): untyped =
   packages.add((name, cmd, hasDeps, url))
 
@@ -30,7 +28,6 @@ pkg "coco", true
 pkg "combparser"
 pkg "compactdict"
 pkg "comprehension", false, "nimble test", "https://github.com/alehander42/comprehension"
-pkg "criterion"
 pkg "dashing", false, "nim c tests/functional.nim"
 pkg "delaunay"
 pkg "docopt"
